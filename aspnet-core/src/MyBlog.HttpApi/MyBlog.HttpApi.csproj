@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>MyBlog</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\MyBlog.HttpApi.Host\MyBlog.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="2.8.0" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="2.8.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="2.8.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="2.8.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyBlog.Application\MyBlog.Application.csproj" />
+  </ItemGroup>
+
+</Project>
